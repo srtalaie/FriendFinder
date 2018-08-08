@@ -20,7 +20,7 @@ module.exports = function (app) {
         let currentUser = friendsData[friendsData.length - 1]
 
         //Loops through firendsArray to see who is a compatbile match between current user and the entire database of friends based on the lowest deviation
-        for (let i = 0; i < friendsData.length; i++) {
+        for (let i = 0; i < friendsData.length - 2; i++) {
             let results = totalDifference(currentUser.scores, friendsData[i].scores);
             if (results < 20) {
                  res.json(true);
