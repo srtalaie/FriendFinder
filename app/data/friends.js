@@ -10,7 +10,11 @@ let friendsArray = [
     {
         name: 'Rob Low',
         scores: [4, 4, 1, 3, 1, 5, 1, 2, 3, 3]
-    }
+    },    
+    {
+        name: 'Joe Loe 2',
+        scores: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    },
 ]
 
 module.exports = friendsArray;
