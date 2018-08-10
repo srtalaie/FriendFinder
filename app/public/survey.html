@@ -18,6 +18,7 @@
                 <h1 class="display-4">FriendFinder Survey</h1>
                 <p class="lead">Fill out our survey to see if you are compatible with any of our friends who have joined.</p>
                 <a class="btn btn-primary btn-lg" href="/" role="button">Home</a>
+                <a class="btn btn-lg" href="/api/friends" role="button">API Friends List</a>
             </div>
         </div>
     </div>
@@ -225,7 +226,8 @@
                 data: newFriend
             }).then(function (res) {
                 $('.modal').modal('show');
-                $('.modal-body').html(res);
+                console.log(res);
+                $('.modal-body').html(`<ul>${res}</li>`);
             });
         });
     </script>

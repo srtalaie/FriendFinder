@@ -14,9 +14,9 @@ module.exports = function (app) {
         //Loops through firendsArray to see who is a compatbile match between current user and the entire database of friends based on the lowest deviation
         for (let i = 0; i < friendsData.length - 1; i++) {
             if (totalDifference(newFriend.scores, friendsData[i].scores) <= 20) {
-                names += friendsData[i].name + ' | ';
+                names += `<li>${friendsData[i].name}</li>`;
             } else {
-                names = 'Sorry no Matches';
+                names = 'Sorry No matches.';
             }
         }
         res.json(names);
